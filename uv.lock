@@ -1,4 +1,5 @@
 version = 1
+revision = 1
 requires-python = ">=3.10"
 
 [[package]]
@@ -250,7 +251,7 @@ name = "click"
 version = "8.2.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "colorama", marker = "platform_system == 'Windows'" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/60/6c/8ca2efa64cf75a977a0d7fac081354553ebe483345c734fb6b6515d96bbc/click-8.2.1.tar.gz", hash = "sha256:27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202", size = 286342 }
 wheels = [
@@ -416,7 +417,7 @@ wheels = [
 
 [[package]]
 name = "fastmcp"
-version = "2.3.5"
+version = "2.5.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "exceptiongroup" },
@@ -428,9 +429,9 @@ dependencies = [
     { name = "typer" },
     { name = "websockets" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/61/30/1a70fce24dd0c9f7e7e2168adad1eb2c126e918128594a7bba06093b9263/fastmcp-2.3.5.tar.gz", hash = "sha256:09e11723c6588d8c13562d5eb04d42b13b91eb32f53cef77cc8c0ee121b2f907", size = 1004996 }
+sdist = { url = "https://files.pythonhosted.org/packages/aa/88/fb6be09318d69792757545b39d88a2d918f1655fae442ada61559b3113ea/fastmcp-2.5.0.tar.gz", hash = "sha256:fcad2fd281cbcb883570116a1c68939b5e5b460f497f502336204280c8385a59", size = 1035515 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d6/0f/098a4c7891d8c6adb69fc4f421e879bed73a352b3c3562b6a0be989b29bd/fastmcp-2.3.5-py3-none-any.whl", hash = "sha256:193e35a8d35a5c6a4af07e764873d8592aadc2f1e32dd8827b57869a83956088", size = 97240 },
+    { url = "https://files.pythonhosted.org/packages/28/54/fc9a2b1dc6e1fd564f158e48550f9c2a5abfa0819d3aaf5e803e63fca284/fastmcp-2.5.0-py3-none-any.whl", hash = "sha256:9001227c3923b5a3a8138f5d78869e82c8f54f9184c52dde95bf719278861043", size = 105797 },
 ]
 
 [[package]]
@@ -763,7 +764,6 @@ cli = [
 
 [[package]]
 name = "mcp-atlassian"
-version = "0.11.8.dev12+89653e7"
 source = { editable = "." }
 dependencies = [
     { name = "atlassian-python-api" },
@@ -808,7 +808,7 @@ requires-dist = [
     { name = "beautifulsoup4", specifier = ">=4.12.3" },
     { name = "cachetools", specifier = ">=5.0.0" },
     { name = "click", specifier = ">=8.1.7" },
-    { name = "fastmcp", specifier = ">=2.3.4,<2.4.0" },
+    { name = "fastmcp", specifier = "==2.5.0" },
     { name = "httpx", specifier = ">=0.28.0" },
     { name = "keyring", specifier = ">=25.6.0" },
     { name = "markdown", specifier = ">=3.7.0" },
