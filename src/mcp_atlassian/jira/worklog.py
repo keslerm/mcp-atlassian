@@ -91,8 +91,8 @@ class WorklogMixin(JiraClient):
             # Convert time_spent string to seconds
             time_spent_seconds = self._parse_time_spent(time_spent)
 
-            # Convert Markdown comment to Jira format if provided
             """
+            # Convert Markdown comment to Jira format if provided
             if comment:
                 # Check if _markdown_to_jira is available (from CommentsMixin)
                 if hasattr(self, "_markdown_to_jira"):
