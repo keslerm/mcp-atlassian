@@ -953,7 +953,7 @@ class IssuesMixin(
                     f"Could not parse datetime for field {field_id}: {value}"
                 )
                 return value  # Return original on error
-        elif schema_type == "array" and isinstance(value, str):
+        elif schema_type == "array":
             return [value]
 
         # Default: return value as is if no specific formatting needed/identified
